@@ -1,5 +1,7 @@
 import Head from "next/head";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/globals.css';
+import '../styles/utils.css';
 
 // Always renders in every page.
 const MyApp = ({ Component, pageProps }) => (

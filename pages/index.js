@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import TecsNavbar from '../components/TecsNavbar';
 import TecsCarousel from '../components/TecsCarousel';
 
 const Home = () => (
@@ -6,8 +7,8 @@ const Home = () => (
     <Head>
       <title>Tecs</title>      
     </Head>
-    <h1>Oi</h1>
-
+    
+    <TecsNavbar /> {/*Bootstrap navbar*/}
     <TecsCarousel /> {/*Bootstrap carousel*/}
   </>
 );

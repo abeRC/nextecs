@@ -57,7 +57,7 @@ const TecsCarousel = () => (
         >
           <img 
             className="w-100 d-block" 
-            src={"/assets/img/Carousel/" + item.imageName}
+            src={"https://tecs.ime.usp.br/assets/img/Carousel/" + item.imageName}
             alt={item.alt}
           />
         </ConditionalWrapper>

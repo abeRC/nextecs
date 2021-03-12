@@ -1,0 +1,119 @@
+/*TODO: There's a lot of inline css that needs to be moved :/*/
+
+
+/*General*/
+.tecsnavbar {
+  z-index: 10;
+  top: 0;
+  transition: top 0.35s; /*no JS that takes advantadge of this right now*/
+
+  color: #1094ab;
+  background-color: #1094ab;
+
+  text-transform: uppercase;
+}
+
+/*TECS logo and text*/
+.tecsnavbar .tecsnavbar-logo-grafo {
+  width: 49px;
+}
+
+@media (min-width: 300px) {
+  .tecsnavbar .tecsnavbar-logo-texto {
+    width: 101px;
+  }
+}
+
+@media (min-width: 576px) {
+  .tecsnavbar .tecsnavbar-logo-texto {
+    width: 140px;
+    margin-right: 2rem;
+  }
+}
+
+/*Toggle button*/
+.tecsnavbar-button {
+  padding-right: 8px;
+  padding-left: 8px;
+  filter: invert(100%); /*Turn it white.*/
+}
+
+/*Media icons START*/
+
+.tecsnavbar-media-icons {
+  align-items: center;
+  vertical-align: middle;
+  min-width: max-content;
+  font-size: 16px;
+  opacity: 0.9;
+  filter: brightness(0) invert(100%); /* turn white */
+}
+
+.tecsnavbar-media-icons a {
+  /*This prevents the anchor element from becoming too wide and causing the icons to the side to jump to the next line.*/
+  width: min-content;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 0; /*_grid.scss is conjuring up some weird 
+  'padding-left: calc(var(--bs-gutter-x)/ 2);' and 'padding-right: calc(var(--bs-gutter-x)/ 2);'*/
+}
+
+/** Prevents social media icons from being underlined on hover.
+  * Overrides Bootstrap's _hover.scss. */
+.tecsnavbar-media-icons a:hover,.media-icons-2 a:hover {
+  text-decoration: none !important;
+}
+
+
+/* navbar expansion (md breakpoint) */
+@media (max-width: 768px) {
+  .tecsnavbar-media-icons {
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar.navbar-light.navbar-expand-md {
+    padding: 1rem 10rem .6rem 9rem;
+    font-weight: 700;
+  }
+
+  /****#navcol-1 {
+    margin-right: 11rem;
+  }*/
+
+  .carousel-inner {
+    height: 80vh;
+  }
+
+  .tecsnavbar-media-icons {
+    padding-left: 5rem;
+    margin-right: -5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /****#navcol-1 {
+    margin-right: 9rem;
+  }*/
+
+  .tecsnavbar-media-icons {
+    padding-left: 0rem;
+    margin-right: 0rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*****#navcol-1 {
+    margin-right: 11rem;
+  }*/
+
+  .tecsnavbar-media-icons {
+    padding-left: 5rem;
+    margin-right: -5rem;
+  }
+}
+
+/*Media icons END*/
+
