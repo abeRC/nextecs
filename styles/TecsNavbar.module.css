@@ -19,14 +19,16 @@
 }
 
 @media (min-width: 300px) {
-  .tecsnavbar .tecsnavbar-logo-texto {
+  .tecsnavbar-logo-texto {
     width: 101px;
   }
 }
 
 @media (min-width: 576px) {
-  .tecsnavbar .tecsnavbar-logo-texto {
+  .tecsnavbar-logo-texto {
     width: 140px;
+  }
+  .navbar-brand {
     margin-right: 2rem;
   }
 }

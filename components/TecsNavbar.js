@@ -67,36 +67,38 @@ which isn’t fully supported in every browser. */
         <!--container-fluid-->
       </nav>
     </div> */
-
+const handleNavKeyPress = (e) => e.key == " " ? e.target.click() : null;
 const TecsNavbar = () => (
   <Navbar expand="md" className={styles.tecsnavbar}> {/*className="nav-coll pt-3 text-uppercase secondary-font" */}
     {/*Collapse button for <md breakpoints.*/}
     <Navbar.Toggle aria-controls="basic-navbar-nav" className={styles['tecsnavbar-button']}/>
     
     {/*Tecs logo*/}
-    <Link href="/" passHref>
-    <Navbar.Brand>
-      {/*Use a css loader maybe? https://stackoverflow.com/questions/35827356/node-react-hyphenated-css-class-names/40121773 */}
-        <img
-          className={styles['tecsnavbar-logo-grafo']}
-          src={"https://tecs.ime.usp.br/assets/img/Logos/tecs-grafo-branco.png"}
-          alt="Logo branco do Tecs (o mapa do Brasil desenhado como um grafo)." 
-        />
-        <img 
-          className={styles['tecsnavbar-logo-texto']}
-          src={"https://tecs.ime.usp.br/assets/img/Logos/tecs-texto-branco.png"}
-          alt="Tecs (escrito em caixa alta, na cor branca)" 
-        />
-    </Navbar.Brand>
+    {/*With the passHref prop, the Navbar.Brand becomes an anchor. Without it, a span (which we don't want)*/}
+    <Link href="/" passHref> 
+      <Navbar.Brand className={styles['navbar-brand']} role="button" role="button" onKeyDown={handleNavKeyPress}>
+        {/*Use a css loader maybe? https://stackoverflow.com/questions/35827356/node-react-hyphenated-css-class-names/40121773 */}
+          <img
+            className={styles['tecsnavbar-logo-grafo']}
+            src={"https://tecs.ime.usp.br/assets/img/Logos/tecs-grafo-branco.png"}
+            alt="Logo branco do Tecs (o mapa do Brasil desenhado como um grafo)." 
+          />
+          <img 
+            className={styles['tecsnavbar-logo-texto']}
+            src={"https://tecs.ime.usp.br/assets/img/Logos/tecs-texto-branco.png"}
+            alt="Tecs (escrito em caixa alta, na cor branca)" 
+          />
+      </Navbar.Brand>
     </Link>
 
     {/*Main navigation */}
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Link href="/lorem_ipsum">Quem somos</Link>
-        <Link href="/lorem_ipsum2">Projetos</Link> {/*Transformar em NavDropdown..? */}
-        <Link href="/lorem_ipsum3/lol">Contato</Link>
-        <Link href={"/"}>Participe</Link>
+        {/*https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role#accessibility_concerns */}
+        <Link href="/lorem_ipsum"><a className="nav-link" role="button" onKeyDown={handleNavKeyPress}>Quem somos</a></Link>
+        <Link href="/lorem_ipsum2"><a className="nav-link" role="button" onKeyDown={handleNavKeyPress}>Projetos</a></Link> {/*Transformar em NavDropdown..? */}
+        <Link href="/lorem_ipsum3/lol"><a className="nav-link" role="button" onKeyDown={handleNavKeyPress}>Contato</a></Link>
+        <Link href="/"><a className="nav-link" role="button" onKeyDown={handleNavKeyPress}>Participe</a></Link>
       </Nav>
     </Navbar.Collapse>
 
