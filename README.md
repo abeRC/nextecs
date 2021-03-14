@@ -1,3 +1,19 @@
+## Falta:
+
+* Head padrão (variando title)
+* Footer (um com ícones de parceiros e outro sem)
+* Relevância do grupo na home (com iconezinhos e tal; inclusive precisamos atualizar isso aí)
+* Mapa do Google (Acho que dá pra deixar em uma página só, inclusive.)
+* Projetos (pf me diga q tem um plugin pra fazer aquele slide nao gambiarramente)
+* auto-hide na navbar (idealmente sem [scroll-linked effects](https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effects))
+* Usar modais para imagens em páginas de GTs (deve ter um plugin ou sla)
+
+----
+
+---
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

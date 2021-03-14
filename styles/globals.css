@@ -45,58 +45,7 @@ html, body {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #ffffff !important;
-}
-
-
-
-
-
-
-
-/*copy and paste; possibly not a problem*/
-
-
-
-
-
-
-.artigos-tecs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2.5rem;
-}
-
-.artigos-tecs .artigos-tecs-item {
-  margin-right: 1.5rem;
-  display: flex;
-  justify-content: center;
-  max-width: 40% !important;
-}
-
-.container-fluid > .artigos-tecs .artigos-tecs-item a {
-  text-align: center;
-  color: #ffffff;
-}
-
-.artigos-tecs .artigos-tecs-item a:hover {
-  transition: all 1s ease;
-  color: #999999;
-  text-decoration: none;
-  transform: scale(1.2);
-}
-
-@media (max-width: 768px) {
-  .media-icons-1 {
-    padding-left: 2rem;
-    padding-right: 1.5rem;
-  }
-
-  /* Ensures footer icons and such are aligned*/
-  .artigos-tecs-item {
-    margin-right: 0 !important;
-  }
+  color: #ffffff !important; /*Else, it'll be black.*/
 }
 
 /* navbar expansion (md breakpoint) */
@@ -106,38 +55,20 @@ html, body {
     font-weight: 700;
   }
 
-  #navcol-1 {
-    margin-right: 11rem;
-  }
-
   .carousel-inner {
-    height: 80vh;
-  }
-
-  .media-icons-1 {
-    padding-left: 5rem;
-    margin-right: -5rem;
+    height: 80vh; /*FIXME: JANKY (if images are very wide, for instance*/
   }
 }
 
-@media (min-width: 992px) {
-  #navcol-1 {
-    margin-right: 9rem;
-  }
-
-  .media-icons-1 {
-    padding-left: 0rem;
-    margin-right: 0rem;
-  }
+iframe {
+  border: 0
 }
 
-@media (min-width: 1200px) {
-  #navcol-1 {
-    margin-right: 11rem;
-  }
-
-  .media-icons-1 {
-    padding-left: 5rem;
-    margin-right: -5rem;
-  }
+/* (*˘︶˘*).｡.:*♡ */
+span.rainbow-text {
+  background: linear-gradient(270deg, #EB51E5 9.83%, #6752E3 31.76%, #52BB41 52.35%, #FAB811 74.73%, #F17935 91.29%, #F95858 102.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-clip: text;
 }

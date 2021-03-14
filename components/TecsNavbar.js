@@ -1,6 +1,6 @@
 //import { forwardRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 import Link from 'next/link'
 //import Image from 'next/image' // kinda awkward to use..?
 
@@ -95,7 +95,8 @@ const TecsNavbar = () => (
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
         {/*https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role#accessibility_concerns */}
-        <Link href="/lorem_ipsum"><a className="nav-link" role="button" onKeyDown={handleNavKeyPress}>Quem somos</a></Link>
+        {/*These are basically Nav.Link components but with Link instead of regular anchors. */}
+        <Link href="/quem_somos"><a className="nav-link" role="button" onKeyDown={handleNavKeyPress}>Quem somos</a></Link>
         <Link href="/lorem_ipsum2"><a className="nav-link" role="button" onKeyDown={handleNavKeyPress}>Projetos</a></Link> {/*Transformar em NavDropdown..? */}
         <Link href="/lorem_ipsum3/lol"><a className="nav-link" role="button" onKeyDown={handleNavKeyPress}>Contato</a></Link>
         <Link href="/"><a className="nav-link" role="button" onKeyDown={handleNavKeyPress}>Participe</a></Link>
